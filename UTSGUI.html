@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+           padding: 0;
+           margin: 0;
+        }
+        .atassidebar{
+            width: 15%;
+            height: 5%;
+            position: fixed;
+            background-color: #c6d4e1;
+            transition: 1s;
+        }
+
+        .atassidebar2{
+            width: 0%;
+            height: 0%;
+            position: fixed;
+            background-color: #c6d4e1;
+            transition: 1s;
+        }
+        .sidebar{
+            width: 15%;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
+            top:0;
+            left: 0;
+            background-color: #44749d;
+            transition: 1s;
+        }
+
+        .sidebar2{
+            width: 0;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
+            top:0;
+            left: 0;
+            background-color: #c6d4e1;
+            transition: 1s;
+        }
+        .w{
+            width: 15%;
+            height: 100%;
+            float: left;
+            transition: 1s;
+        }
+        .main{
+            width: 53%;
+            height: 100%;
+            margin-left: 200px;
+            transition: 1s;
+        }
+        
+        .main2{
+            width: 53%;
+            height: 100%;
+            margin-left: 0px;
+            float: left;
+            transition: 1s;
+        }
+        .kotak{
+            width: 21%;
+            height: 100px;
+            background-color: #c6d4e1;  
+            float: left;
+            margin: 30px 10px 10px 10px
+        }
+        .kotak2{
+            width: 100%;
+            height: 300px;
+            background-color: #c6d4e1;
+            margin: 20px 10px;
+            margin-left: 30px;
+            float: left;
+        }
+
+        .kanan{
+            width: 15%;
+            height: 100%;
+            margin-left: 500px;
+        }
+
+        .kanan2{
+            width: 15%;
+            height: 500%;
+            margin-left: 0px;
+        }
+
+        .kotak3{
+            width: 15%;
+            height: 400px;
+            background-color: #ebe7e0;
+            margin-left: 750px;
+            margin-top: 15px;
+        }
+       
+   </style>
+
+</head>
+
+<body>
+    <div id="sidebar" class ="sidebar2">
+        <div class="atassidebar2" id="atas">
+            <span style="font-size:30px;cursor:pointer;float: right;" onclick="closeNav()">x</span>
+        </div>
+    </div>
+
+    
+    <div id="main" class ="main2">
+        <span style="font-size:30px;cursor:pointer ;float: left; margin-top: 35px;" onclick="openNav()">&#9776;</span>
+        <br>
+        <div class="kotak">
+        </div>
+        <div class="kotak">
+        </div>
+        <div class="kotak">
+        </div>
+        <div class="kotak">
+        </div>
+        <br>
+        <div class="kotak2">
+        </div>
+        <div class="kotak2">
+        </div>
+        <div class="kotak3"></div>
+        <div class="kotak3"></div>
+        </div>
+    </div>
+
+    <div class="w">
+        <div class="kotak3"></div>
+        <div class="kotak3"></div>
+        </div>
+    </div>
+
+    <script>
+        function closeNav(){
+            document.getElementById('sidebar').className = "sidebar2";
+            document.getElementById('main').className = "main2";
+            document.getElementById('atas').className = "atassidebar2";
+        }
+        function openNav(){
+            document.getElementById('sidebar').className = "sidebar";
+            document.getElementById('main').className = "main";
+            document.getElementById('atas').className = "atassidebar";
+        }
+    </script>
+
+</body>
+</html>
